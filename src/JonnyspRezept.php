@@ -1,9 +1,9 @@
 <?php
 
-namespace Jonnysp\Architekt;
+namespace Jonnysp\Rezept;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class JonnyspArchitekt extends Bundle
+class JonnyspRezept extends Bundle
 {
 }
