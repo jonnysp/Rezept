@@ -20,7 +20,7 @@ array_insert($GLOBALS['BE_MOD']['recipes'], 100, array
  */
 if (TL_MODE == 'BE')
 {
-	$GLOBALS['TL_CSS'][] = 'bundles/JonnyspRezept/recipes.css|static';
+	$GLOBALS['TL_CSS'][] = 'bundles/jonnysprezept/recipes.css|static';
 }
 
 
