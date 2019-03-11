@@ -113,7 +113,6 @@ class RecipesCategorieViewer extends ContentElement
 
 		$this->Template->RecipesCategorie = $Categorie;
 		$this->Template->Recipes = $Recipes;
-		$this->Template->HeadlineDescription = 
 
 	}//end compile
 
