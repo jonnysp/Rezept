@@ -117,6 +117,7 @@ $GLOBALS['TL_DCA']['tl_recipes'] = array
 			'eval'                    => array('multiple'=>true, 'tl_class'=>'w50'),
 			'sql'                     => ['type' => 'blob','notnull' => false],
 			'relation'                => array('type'=>'belongsToMany', 'load'=>'lazy'  )
+
 		),
 		'tstamp' => array
 		(
@@ -195,28 +196,6 @@ $GLOBALS['TL_DCA']['tl_recipes'] = array
 );
 
 class tl_recipes extends Backend{
-
-//	public function generateRecipeRow($arrRow)	{
-
-
-//		$this->loadLanguageFile('tl_recipes');
-
-//		$label = '<table style="margin-left:86px;" class="tl_header_table">
-//				  <tr><td><span class="tl_label">'.$GLOBALS['TL_LANG']['tl_recipes']['title'][0].':</span></td><td>'.$arrRow['title']. ' - ['.$arrRow['lang'].']</td></tr>
-//				  <tr><td><span class="tl_label">'.$GLOBALS['TL_LANG']['tl_recipes']['categorie'][0].':</span></td><td> '.implode(", ",unserialize($arrRow['categorie'])).'</td></tr>
-//				  </table>';
-
-
-//		if ($arrRow['image'] != '')
-//		{
-//			$objFile = FilesModel::findByUuid($arrRow['image']);
-//			if ($objFile !== null)
-//			{
-//				$label = Image::getHtml(Image::get($objFile->path, 70, 70, 'center_top'), '', 'style="float:left;"') . ' ' . $label;
-//			}
-//		}
-//		return $arrRow['title'];
-//    }
 
 
 	public function setFileTreeFlags($varValue, DataContainer $dc)

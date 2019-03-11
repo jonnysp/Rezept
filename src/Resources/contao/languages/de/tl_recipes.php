@@ -15,9 +15,6 @@ $GLOBALS['TL_LANG']['tl_recipes']['toggle'] 	 = array('AN/AUS','An / Aus');
 $GLOBALS['TL_LANG']['tl_recipes']['images'] 	 = array('Mehr Rezeptbilder','wählen sie hier weitere Rezeptbilder aus.');
 $GLOBALS['TL_LANG']['tl_recipes']['imagessort']  = array('Bildsortierung', '');
 
-//$GLOBALS['TL_LANG']['tl_recipes']['lang'] = array('Sprache','Wählen sie die Sprache des Rezepts.');
-
-
 
 /**
  * Legends

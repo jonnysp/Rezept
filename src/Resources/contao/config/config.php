@@ -31,7 +31,7 @@ array_insert($GLOBALS['TL_CTE'], 1, array
 	(
 		'includes' 	=> array
 			(
-				'recipes_viewer' 	=> 'RecipesViewer',
+				//'recipes_viewer' 	=> 'RecipesViewer',
 				'recipescategorie_viewer'	=> 'RecipesCategorieViewer'
 			)
 	)
