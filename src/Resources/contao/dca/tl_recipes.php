@@ -188,6 +188,8 @@ $GLOBALS['TL_DCA']['tl_recipes'] = array
 	)
 );
 
+use Contao\Image\ResizeConfiguration;
+
 class tl_recipes extends Backend{
 
 	public function generateReferenzRow($arrRow)	{
