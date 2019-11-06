@@ -10,8 +10,7 @@
 
 array_insert($GLOBALS['BE_MOD']['recipes'], 100, array
 (
-	'recipescategorie' 	=> array('tables' => array('tl_recipes_categories')),
-	'recipesitems' 	=> array('tables' => array('tl_recipes'))
+	'recipescategorie' 		=> array('tables' => array('tl_recipes_categories', 'tl_recipes'))
 ));
 
 
@@ -31,7 +30,6 @@ array_insert($GLOBALS['TL_CTE'], 1, array
 	(
 		'includes' 	=> array
 			(
-				//'recipes_viewer' 	=> 'RecipesViewer',
 				'recipescategorie_viewer'	=> 'RecipesCategorieViewer'
 			)
 	)

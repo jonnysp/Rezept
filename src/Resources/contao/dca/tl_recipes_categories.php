@@ -10,6 +10,7 @@ $GLOBALS['TL_DCA']['tl_recipes_categories'] = array
 	'config' => array
 	(
 		'dataContainer'               => 'Table',
+		'ctable'                      => array('tl_recipes'),
 		'enableVersioning'            => true,
 		'sql' => array
 		(
@@ -32,8 +33,8 @@ $GLOBALS['TL_DCA']['tl_recipes_categories'] = array
 		),
 		'label' => array
 		(
-			'fields'                  => array('title'),
-			'format'                  => '%s'
+			'fields'                  => array('id','title'),
+			'format'                  => '[%s] - %s'
 		),
 		
 		'global_operations' => array
@@ -51,21 +52,20 @@ $GLOBALS['TL_DCA']['tl_recipes_categories'] = array
 			'edit' => array
 			(
 				'label'               => &$GLOBALS['TL_LANG']['tl_recipes_categories']['edit'],
-				'href'                => 'act=edit',
+				'href'                => 'table=tl_recipes',
 				'icon'                => 'edit.svg'
 			),
-
+			'editheader' => array
+			(
+				'label'               => &$GLOBALS['TL_LANG']['tl_recipes_categories']['editheader'],
+				'href'                => 'act=edit',
+				'icon'                => 'header.svg'
+			),
 			'copy' => array
 			(
 				'label'               => &$GLOBALS['TL_LANG']['tl_recipes_categories']['copy'],
 				'href'                => 'act=copy',
 				'icon'                => 'copy.svg'
-			),
-			'cut' => array
-			(
-				'label'               => &$GLOBALS['TL_LANG']['tl_recipes_categories']['cut'],
-				'href'                => 'act=paste&amp;mode=cut',
-				'icon'                => 'cut.svg'
 			),
 			'delete' => array
 			(

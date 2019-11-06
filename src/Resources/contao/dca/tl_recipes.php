@@ -10,12 +10,14 @@ $GLOBALS['TL_DCA']['tl_recipes'] = array
 	'config' => array
 	(
 		'dataContainer'               => 'Table',
+		'ptable'                      => 'tl_recipes_categories',
 		'enableVersioning'            => true,
 		'sql' => array
 		(
 			'keys' => array
 			(
-				'id' => 'primary'
+				'id' => 'primary',
+				'pid' => 'index'
 			)
 		)
 	),
@@ -23,17 +25,14 @@ $GLOBALS['TL_DCA']['tl_recipes'] = array
 	// List
 	'list' => array
 	(
-		'sorting' => array
+		 'sorting' => array
 		(
-			'mode'                    => 1,
-			'fields'                  => array('title'),
-			'flag'                    => 3,
-			'panelLayout'             => 'filter;search,limit'
-		),
-		'label' => array
-		(
-			'fields'                  => array('title'),
-			'format'                  => '%s'
+			'mode'                    => 4,
+			'fields'                  => array('sorting'),
+			'headerFields'            => array('title'),
+			'flag'        			  => 1,
+			'panelLayout'             => 'filter;search,limit',
+			'child_record_callback'   => array('tl_recipes', 'generateReferenzRow')
 		),
 
 		'global_operations' => array
@@ -95,7 +94,7 @@ $GLOBALS['TL_DCA']['tl_recipes'] = array
 	// Palettes
 	'palettes' => array
 	(
-		'default'                     => 'categories,published;{title_legend},title;{title_images},image,images;{title_description},description,ingredients,preparation,tags'
+		'default'                     => '{title_legend},published,title;{title_images},image,images;{title_description},description,ingredients,preparation,tags'
 	),
 
 	// Fields
@@ -105,19 +104,13 @@ $GLOBALS['TL_DCA']['tl_recipes'] = array
 		(
 			'sql'                     => "int(10) unsigned NOT NULL auto_increment"
 		),
-
-		'categories' => array
+		'pid' => array
 		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_recipes']['categories'],
-			'exclude'                 => true,
-			'filter'                  => true,
-			'flag'                    => 1,
-			'inputType'               => 'checkboxWizard',
-			'foreignKey'              => 'tl_recipes_categories.title',
-			'eval'                    => array('multiple'=>true, 'tl_class'=>'w50'),
-			'sql'                     => ['type' => 'blob','notnull' => false],
-			'relation'                => array('type'=>'belongsToMany', 'load'=>'lazy'  )
-
+			'sql'                     => "int(10) unsigned NOT NULL default '0'"
+		),
+		'sorting' => array
+		(
+			'sql'                     => "int(10) unsigned NOT NULL default '0'"
 		),
 		'tstamp' => array
 		(
@@ -196,6 +189,26 @@ $GLOBALS['TL_DCA']['tl_recipes'] = array
 );
 
 class tl_recipes extends Backend{
+
+	public function generateReferenzRow($arrRow)	{
+		$this->loadLanguageFile('tl_recipes');
+
+		$label = $arrRow['title'];
+
+		if ($arrRow['image'] != '')
+		{
+			$objFile = FilesModel::findByUuid($arrRow['image']);
+			if ($objFile !== null)
+			{
+				$container = System::getContainer();
+				$rootDir = $container->getParameter('kernel.project_dir');
+
+				$label = Image::getHtml($container->get('contao.image.image_factory')->create($rootDir.'/'.$objFile->path,(new ResizeConfiguration())->setWidth(80)->setHeight(80)->setMode(ResizeConfiguration::MODE_BOX))->getUrl($rootDir), '', 'style="float:left;"') . ' ' . $label;
+
+			}
+		}
+		return $label;
+    }
 
 
 	public function setFileTreeFlags($varValue, DataContainer $dc)
