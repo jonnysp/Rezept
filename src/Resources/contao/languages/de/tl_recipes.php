@@ -9,7 +9,6 @@ $GLOBALS['TL_LANG']['tl_recipes']['image']       = array('Rezept Bild', 'Rezept 
 $GLOBALS['TL_LANG']['tl_recipes']['description'] = array('Beschreibung', 'Rezept Beschreibung.');
 $GLOBALS['TL_LANG']['tl_recipes']['ingredients'] = array('Zutaten', 'Rezept Zutaten.');
 $GLOBALS['TL_LANG']['tl_recipes']['preparation'] = array('Zubereitung', 'Rezept Zubereitung.');
-$GLOBALS['TL_LANG']['tl_recipes']['tags'] 		 = array('Tags', 'Rezept Tags.');
 $GLOBALS['TL_LANG']['tl_recipes']['toggle'] 	 = array('AN/AUS','An / Aus');
 
 $GLOBALS['TL_LANG']['tl_recipes']['images'] 	 = array('Mehr Rezeptbilder','wählen sie hier weitere Rezeptbilder aus.');

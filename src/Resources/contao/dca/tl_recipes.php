@@ -94,7 +94,7 @@ $GLOBALS['TL_DCA']['tl_recipes'] = array
 	// Palettes
 	'palettes' => array
 	(
-		'default'                     => '{title_legend},published,title;{title_images},image,images;{title_description},description,ingredients,preparation,tags'
+		'default'                     => '{title_legend},title,published;{title_images},image,images;{title_description},description,ingredients,preparation,tags'
 	),
 
 	// Fields
@@ -168,15 +168,6 @@ $GLOBALS['TL_DCA']['tl_recipes'] = array
 			'eval'                    => array('rte'=>'tinyMCE','tl_class'=>'clr'),
 			'sql'                     => ['type' => 'text','notnull' => false]
 		),
-		'tags' => array
-		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_recipes']['tags'],
-			'filter'                  => false,
-			'search'              	=> false,
-			'inputType'               => 'listWizard',
-			'eval'                    => array('allowHtml'=>false,'maxlength'=>128),
-			'sql'                     => ['type' => 'string', 'length' => 128, 'default' => '']
-		),		
 		'published' => array
 		(
 			'label'                   => &$GLOBALS['TL_LANG']['tl_recipes']['toggle'],

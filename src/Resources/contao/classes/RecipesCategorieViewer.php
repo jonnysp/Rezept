@@ -26,11 +26,10 @@ class RecipesCategorieViewer extends ContentElement
 		//gets the categorie
 		$objCategorie = \RecipesCategoriesModel::findByPK($this->recipescategorie);
 		
-		//gets all recipes wher published in title order
 		$Recipes = array();
 
 		$filterRecipes = \RecipesModel::findAll(
-			array('column' => array('pid=?','published=?'),'value' => array($objCategorie->id,1) ,'order' => 'sorting')
+			array('column' => array('pid=?','published=?'),'value' => array($this->recipescategorie,1) ,'order' => 'sorting')
 		);
 
 		//get Categorie data
