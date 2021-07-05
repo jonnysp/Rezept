@@ -34,17 +34,19 @@ class RecipesCategorieViewer extends ContentElement
 
 		//get Categorie data
 		$CategorieImage = \FilesModel::findByPk($objCategorie->image);
+
 		$Categorie = array(
-			id => $objCategorie->id,
-			title => $objCategorie->title,
-			description => $objCategorie->description,
-			image => array(
-					meta => $this->getMetaData($CategorieImage->meta, $objPage->language),
-					path => $CategorieImage->path,
-					name => $CategorieImage->name,
-					extension => $CategorieImage->extension
+			"id" => $objCategorie->id,
+			"title" => $objCategorie->title,
+			"description" => $objCategorie->description,
+			"image" => array(
+					"meta" => $this->getMetaData($CategorieImage->meta, $objPage->language),
+					"path" => $CategorieImage->path,
+					"name" => $CategorieImage->name,
+					"extension" => $CategorieImage->extension
 				)
 		);
+
 
 		//get Recipes data
 		if (count($filterRecipes) > 0){
@@ -65,10 +67,10 @@ class RecipesCategorieViewer extends ContentElement
 								if ($Image->uuid == $uuid) {
 									array_push($RecipeImages, array
 										(
-											meta => $this->getMetaData($Image->meta, $objPage->language),
-											path => $Image->path,
-											name => $Image->name,
-											extension => $Image->extension
+											"meta" => $this->getMetaData($Image->meta, $objPage->language),
+											"path" => $Image->path,
+											"name" => $Image->name,
+											"extension" => $Image->extension
 										)
 									);
 								}
@@ -79,21 +81,21 @@ class RecipesCategorieViewer extends ContentElement
 
 				// generate Data_array
 				$Recipes[$key] = array(
-					id => $value->id,
-					title => $value->title,
-					description => $value->description,
-					ingredients => $value->ingredients,
-					preparation => $value->preparation,
-					published => $value->published,
-					tags => StringUtil::deserialize($value->tags),
-					categories => StringUtil::deserialize($value->categories),
-					image =>  array(
-							meta => $this->getMetaData($RecipeImage->meta, $objPage->language),
-							path => $RecipeImage->path,
-							name => $RecipeImage->name,
-							extension => $RecipeImage->extension
+					"id" => $value->id,
+					"title" => $value->title,
+					"description" => $value->description,
+					"ingredients" => $value->ingredients,
+					"preparation" => $value->preparation,
+					"published" => $value->published,
+					"tags" => StringUtil::deserialize($value->tags),
+					"categories" => StringUtil::deserialize($value->categories),
+					"image" =>  array(
+							"meta" => $this->getMetaData($RecipeImage->meta, $objPage->language),
+							"path" => $RecipeImage->path,
+							"name" => $RecipeImage->name,
+							"extension" => $RecipeImage->extension
 							),
-					images => $RecipeImages
+					"images" => $RecipeImages
 				);
 			}
 		}
