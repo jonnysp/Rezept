@@ -1,2 +1,2 @@
 # Rezept
-Adds Recipes Management to Contao 4
+Adds Recipes Management to Contao
