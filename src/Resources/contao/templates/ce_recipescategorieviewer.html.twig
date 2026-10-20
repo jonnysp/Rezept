@@ -1,0 +1,83 @@
+
+<h1>{{ RecipesCategorie.title }}</h1>
+{{ RecipesCategorie.description|sanitize_html('contao')|insert_tag_html  }}
+
+<div class="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2">
+
+    {% for recipeKey, recipe in Recipes %}
+        <div class="card position-relative">
+            {% if recipe.image %}
+                <a class="stretched-link text-decoration-none" href="#" data-bs-toggle="dialog" data-bs-target="#Recipe_{{ recipeKey }}">
+                    <figure class="mb-0 ratio-1x1">
+                        <img src="{{ recipe.image.path|default }}" alt="{{ recipe.title }}" class="card-img object-fit-cover h-100">
+                            <figcaption class="position-absolute bottom-0 start-50 translate-middle-x">
+                                <h4 class="fg-white">{{ recipe.title }}</h4>
+                        </figcaption>
+                    </figure>
+                </a>
+            {% endif %}
+        </div>
+    {% endfor %}
+
+
+    {% for recipeKey, recipe in Recipes %}
+        <dialog class="dialog dialog-scrollable" id="Recipe_{{ recipeKey }}">
+            <div class="dialog-header">
+                <h1 class="dialog-title">{{ recipe.title }}</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="dialog" aria-label="Close"></button>
+            </div>
+
+            {% if recipe.images %}  
+                <div id="carouselRecipe_{{ recipeKey }}" class="carousel carousel-overlay slide">
+                    <div class="carousel-inner">
+                        {% if recipe.images %}  
+                            {% for  recipeimage in recipe.images %}
+                                <div class="carousel-item {{ loop.first ? 'active' }}">
+                                    <img src="{{ recipeimage.path|default }}" alt="{{ recipe.title }}" class="d-block w-100">
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                        <div class="carousel-overlay-controls">
+                            <div>
+                                <button class="btn-icon btn-sm btn-subtle theme-secondary" type="button" data-bs-target="#carouselRecipe_{{ recipeKey }}" data-bs-slide="prev">
+                                    <span class="carousel-icon-prev" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="btn-icon btn-sm btn-subtle theme-secondary" type="button" data-bs-target="#carouselRecipe_{{ recipeKey }}" data-bs-slide="next">
+                                    <span class="carousel-icon-next" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                            <div class="carousel-indicators">
+                            {% if recipe.images %}
+                                {% for  recipeimage in recipe.images %}
+                                    <button type="button" data-bs-target="#carouselRecipe_{{ recipeKey }}" data-bs-slide-to="{{ loop.index0 }}" class="{{ loop.first ? 'active' }}" aria-current="true" aria-label="Slide {{ loop.index }}"></button>
+                                {% endfor %}
+                            {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% else %}
+                {% if recipe.image %}
+                    <img src="{{ recipe.image.path|default }}" alt="{{ recipe.title }}" class="img-fluid">
+                {% endif %}
+            {% endif %}
+
+            <div class="dialog-body">
+                {% if recipe.description %} 
+                    <h4>{{ 'tl_recipes.description.0'|trans({}, 'contao_backend') }}</h4>
+                    {{ recipe.description|sanitize_html('contao')|insert_tag_html }}
+                {% endif %}
+                {% if recipe.ingredients %} 
+                    <h4>{{ 'tl_recipes.ingredients.0'|trans({}, 'contao_backend') }}</h4>
+                    {{ recipe.ingredients|sanitize_html('contao')|insert_tag_html }}
+                {% endif %}
+                {% if recipe.preparation %} 
+                    <h4>{{ 'tl_recipes.preparation.0'|trans({}, 'contao_backend') }}</h4>
+                    {{ recipe.preparation|sanitize_html('contao')|insert_tag_html }}
+                {% endif %}
+            </div>
+        </dialog>
+    {% endfor %}
+</div>

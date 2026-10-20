@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file datatype="plaintext" original="src/contao/languages/en/modules.xlf" source-language="en" target-language="en">
+    <body>
+      <!-- Navigations-Menü (MOD) -->
+      <trans-unit id="MOD.recipes.0">
+        <source>Recipe</source>
+        <target>Recipe</target>
+      </trans-unit>
+      <trans-unit id="MOD.recipescategorie.0">
+        <source>Recipes</source>
+        <target>Recipes</target>
+      </trans-unit>
+      <trans-unit id="MOD.recipescategorie.1">
+        <source>Manage your recipes</source>
+        <target>Manage your recipes</target>
+      </trans-unit>
+
+      <!-- Inhaltselemente (CTE) -->
+      <trans-unit id="CTE.recipescategorie_viewer.0">
+        <source>Recipe Category</source>
+        <target>Recipe Category</target>
+      </trans-unit>
+      <trans-unit id="CTE.recipescategorie_viewer.1">
+        <source></source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

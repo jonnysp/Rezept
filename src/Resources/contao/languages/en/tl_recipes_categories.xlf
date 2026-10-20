@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file datatype="plaintext" original="src/contao/languages/en/tl_recipes_categories.xlf" source-language="en" target-language="en">
+    <body>
+      <!-- Fields -->
+      <trans-unit id="tl_recipes_categories.title.0">
+        <source>Recipe Category Name</source>
+        <target>Recipe Category Name</target>
+      </trans-unit>
+      <trans-unit id="tl_recipes_categories.title.1">
+        <source>Enter the category name here.</source>
+        <target>Enter the category name here.</target>
+      </trans-unit>
+      <trans-unit id="tl_recipes_categories.image.0">
+        <source>Recipe Category Image</source>
+        <target>Recipe Category Image</target>
+      </trans-unit>
+      <trans-unit id="tl_recipes_categories.image.1">
+        <source>Category image.</source>
+        <target>Category image.</target>
+      </trans-unit>
+      <trans-unit id="tl_recipes_categories.description.0">
+        <source>Recipe Category Description</source>
+        <target>Recipe Category Description</target>
+      </trans-unit>
+      <trans-unit id="tl_recipes_categories.description.1">
+        <source>Category description.</source>
+        <target>Category description.</target>
+      </trans-unit>
+
+      <!-- Legends -->
+      <trans-unit id="tl_recipes_categories.title_legend">
+        <source>Recipe basic settings</source>
+        <target>Recipe basic settings</target>
+      </trans-unit>
+      <trans-unit id="tl_recipes_categories.image_legend">
+        <source>Recipe Category Image</source>
+        <target>Recipe Category Image</target>
+      </trans-unit>
+
+      <!-- Buttons -->
+      <trans-unit id="tl_recipes_categories.new.0">
+        <source>New recipe category</source>
+        <target>New recipe category</target>
+      </trans-unit>
+      <trans-unit id="tl_recipes_categories.new.1">
+        <source>Create a new recipe category</source>
+        <target>Create a new recipe category</target>
+      </trans-unit>
+      <trans-unit id="tl_recipes_categories.show.0">
+        <source>Recipe category details</source>
+        <target>Recipe category details</target>
+      </trans-unit>
+      <trans-unit id="tl_recipes_categories.show.1">
+        <source>Show details of recipe category ID %s</source>
+        <target>Show details of recipe category ID %s</target>
+      </trans-unit>
+      <trans-unit id="tl_recipes_categories.children.0">
+        <source>Edit recipes</source>
+        <target>Edit recipes</target>
+      </trans-unit>
+      <trans-unit id="tl_recipes_categories.children.1">
+        <source>Edit recipes in category ID %s</source>
+        <target>Edit recipes in category ID %s</target>
+      </trans-unit>
+      <trans-unit id="tl_recipes_categories.edit.0">
+        <source>Edit recipe category</source>
+        <target>Edit recipe category</target>
+      </trans-unit>
+      <trans-unit id="tl_recipes_categories.edit.1">
+        <source>Edit recipe category ID %s</source>
+        <target>Edit recipe category ID %s</target>
+      </trans-unit>
+      <trans-unit id="tl_recipes_categories.copy.0">
+        <source>Copy recipe category</source>
+        <target>Copy recipe category</target>
+      </trans-unit>
+      <trans-unit id="tl_recipes_categories.copy.1">
+        <source>Copy recipe category ID %s</source>
+        <target>Copy recipe category ID %s</target>
+      </trans-unit>
+      <trans-unit id="tl_recipes_categories.delete.0">
+        <source>Delete recipe category</source>
+        <target>Delete recipe category</target>
+      </trans-unit>
+      <trans-unit id="tl_recipes_categories.delete.1">
+        <source>Delete recipe category ID %s</source>
+        <target>Delete recipe category ID %s</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

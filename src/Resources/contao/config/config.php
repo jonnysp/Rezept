@@ -3,36 +3,48 @@
 /**
  * Contao Open Source CMS
  *
- * Copyright (c) 2005-2019 Jonny Spitzner
+ * Copyright (c) 2005-2026 Jonny Spitzner
  *
  * @license LGPL-3.0+
  */
 
-array_insert($GLOBALS['BE_MOD']['recipes'], 100, array
-(
-	'recipescategorie' 		=> array('tables' => array('tl_recipes_categories', 'tl_recipes'))
-));
+use Recipes\Model\RecipesModel;
+use Recipes\Model\RecipesCategoriesModel;
 
+use Contao\ArrayUtil;
+use Contao\System;
+use Symfony\Component\HttpFoundation\Request;
+
+$GLOBALS['TL_MODELS']['tl_recipes'] = RecipesModel::class;
+$GLOBALS['TL_MODELS']['tl_recipes_categories'] = RecipesCategoriesModel::class;
+
+ArrayUtil::arrayInsert($GLOBALS['BE_MOD']['recipes'], 100, array
+	(
+		'recipescategorie' => array('tables' => array('tl_recipes_categories', 'tl_recipes'))
+	)
+);
 
 /**
  * Style sheet
  */
-if (TL_MODE == 'BE')
+if (System::getContainer()->get('contao.routing.scope_matcher')
+	->isBackendRequest(System::getContainer()->get('request_stack')->getCurrentRequest() ?? Request::create(''))
+) 
 {
 	$GLOBALS['TL_CSS'][] = 'bundles/jonnysprezept/recipes.css|static';
-}
-
+};
 
 /**
  * Front end modules
  */
-array_insert($GLOBALS['TL_CTE'], 1, array
+ArrayUtil::arrayInsert($GLOBALS['TL_CTE'], 1, array
 	(
-		'includes' 	=> array
-			(
-				'recipescategorie_viewer'	=> 'RecipesCategorieViewer'
-			)
+		'includes' => array
+		(
+			'recipescategorie_viewer'    => 'RecipesCategorieViewer'
+		)
 	)
 );
+
 
 

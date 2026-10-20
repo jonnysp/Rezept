@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file datatype="plaintext" original="src/contao/languages/de/tl_content.xlf" source-language="en" target-language="de">
+    <body>
+      <!-- Feld-Übersetzung -->
+      <trans-unit id="tl_content.recipescategorie.0">
+        <source>Recipe category</source>
+        <target>Rezept Kategorie</target>
+      </trans-unit>
+      <trans-unit id="tl_content.recipescategorie.1">
+        <source>Please select a recipe category from the list!</source>
+        <target>Bitte wählen Sie eine Rezept Kategorie aus der Liste!</target>
+      </trans-unit>
+
+      <!-- Legenden-Übersetzung -->
+      <trans-unit id="tl_content.recipes_categories_legend">
+        <source>Recipe category</source>
+        <target>Rezept Kategorie</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

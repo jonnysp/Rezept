@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file datatype="plaintext" original="src/contao/languages/en/tl_recipes.xlf" source-language="en" target-language="en">
+    <body>
+      <!-- Fields -->
+      <trans-unit id="tl_recipes.categories.0">
+        <source>Recipe Categories</source>
+        <target>Recipe Categories</target>
+      </trans-unit>
+      <trans-unit id="tl_recipes.categories.1">
+        <source>Assign the recipe categories here.</source>
+        <target>Assign the recipe categories here.</target>
+      </trans-unit>
+      <trans-unit id="tl_recipes.title.0">
+        <source>Recipe Name</source>
+        <target>Recipe Name</target>
+      </trans-unit>
+      <trans-unit id="tl_recipes.title.1">
+        <source>Enter the recipe name here.</source>
+        <target>Enter the recipe name here.</target>
+      </trans-unit>
+      <trans-unit id="tl_recipes.image.0">
+        <source>Recipe Image</source>
+        <target>Recipe Image</target>
+      </trans-unit>
+      <trans-unit id="tl_recipes.image.1">
+        <source>Recipe Image.</source>
+        <target>Recipe Image.</target>
+      </trans-unit>
+      <trans-unit id="tl_recipes.description.0">
+        <source>Description</source>
+        <target>Description</target>
+      </trans-unit>
+      <trans-unit id="tl_recipes.description.1">
+        <source>Recipe description.</source>
+        <target>Recipe description.</target>
+      </trans-unit>
+      <trans-unit id="tl_recipes.ingredients.0">
+        <source>Ingredients</source>
+        <target>Ingredients</target>
+      </trans-unit>
+      <trans-unit id="tl_recipes.ingredients.1">
+        <source>Recipe ingredients.</source>
+        <target>Recipe ingredients.</target>
+      </trans-unit>
+      <trans-unit id="tl_recipes.preparation.0">
+        <source>Preparation</source>
+        <target>Preparation</target>
+      </trans-unit>
+      <trans-unit id="tl_recipes.preparation.1">
+        <source>Recipe preparation.</source>
+        <target>Recipe preparation.</target>
+      </trans-unit>
+      <trans-unit id="tl_recipes.toggle.0">
+        <source>ON/OFF</source>
+        <target>ON/OFF</target>
+      </trans-unit>
+      <trans-unit id="tl_recipes.toggle.1">
+        <source>On / Off</source>
+        <target>On / Off</target>
+      </trans-unit>
+      <trans-unit id="tl_recipes.images.0">
+        <source>More recipe images</source>
+        <target>More recipe images</target>
+      </trans-unit>
+      <trans-unit id="tl_recipes.images.1">
+        <source>Select additional recipe images here.</source>
+        <target>Select additional recipe images here.</target>
+      </trans-unit>
+      <trans-unit id="tl_recipes.imagessort.0">
+        <source>Image sorting</source>
+        <target>Image sorting</target>
+      </trans-unit>
+      <trans-unit id="tl_recipes.imagessort.1">
+        <source></source>
+        <target></target>
+      </trans-unit>
+
+      <!-- Legends -->
+      <trans-unit id="tl_recipes.title_legend">
+        <source>Recipe</source>
+        <target>Recipe</target>
+      </trans-unit>
+      <trans-unit id="tl_recipes.title_legends">
+        <source>Recipes</source>
+        <target>Recipes</target>
+      </trans-unit>
+      <trans-unit id="tl_recipes.title_images">
+        <source>Recipe Images</source>
+        <target>Recipe Images</target>
+      </trans-unit>
+      <trans-unit id="tl_recipes.title_description">
+        <source>Recipe Descriptions</source>
+        <target>Recipe Descriptions</target>
+      </trans-unit>
+
+      <!-- Buttons -->
+      <trans-unit id="tl_recipes.new.0">
+        <source>New recipe</source>
+        <target>New recipe</target>
+      </trans-unit>
+      <trans-unit id="tl_recipes.new.1">
+        <source>Create a new recipe</source>
+        <target>Create a new recipe</target>
+      </trans-unit>
+      <trans-unit id="tl_recipes.show.0">
+        <source>Recipe details</source>
+        <target>Recipe details</target>
+      </trans-unit>
+      <trans-unit id="tl_recipes.show.1">
+        <source>Details of recipe ID %s</source>
+        <target>Details of recipe ID %s</target>
+      </trans-unit>
+      <trans-unit id="tl_recipes.edit.0">
+        <source>Edit recipe</source>
+        <target>Edit recipe</target>
+      </trans-unit>
+      <trans-unit id="tl_recipes.edit.1">
+        <source>Edit recipe ID %s</source>
+        <target>Edit recipe ID %s</target>
+      </trans-unit>
+      <trans-unit id="tl_recipes.copy.0">
+        <source>Copy recipe</source>
+        <target>Copy recipe</target>
+      </trans-unit>
+      <trans-unit id="tl_recipes.copy.1">
+        <source>Copy recipe ID %s</source>
+        <target>Copy recipe ID %s</target>
+      </trans-unit>
+      <trans-unit id="tl_recipes.delete.0">
+        <source>Delete recipe</source>
+        <target>Delete recipe</target>
+      </trans-unit>
+      <trans-unit id="tl_recipes.delete.1">
+        <source>Delete recipe ID %s</source>
+        <target>Delete recipe ID %s</target>
+      </trans-unit>
+      <trans-unit id="tl_recipes.cut.0">
+        <source>Move recipe</source>
+        <target>Move recipe</target>
+      </trans-unit>
+      <trans-unit id="tl_recipes.cut.1">
+        <source>Move recipe ID %s</source>
+        <target>Move recipe ID %s</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
