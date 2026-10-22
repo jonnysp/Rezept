@@ -111,7 +111,7 @@ $GLOBALS['TL_DCA']['tl_recipes'] = array
 			'label'                   => &$GLOBALS['TL_LANG']['tl_recipes']['images'],
 			'inputType'               => 'fileTree',
 			'eval'                    => array('multiple'=>true, 'fieldType'=>'checkbox', 'isSortable'=>true , 'files'=>true,'tl_class'=>'long clr','filesOnly'=>true, 'extensions'=>'%contao.image.valid_extensions%'),
-			'sql'                     => ['type' => 'blob','notnull' => false]//,
+			'sql'                     => ['type' => 'blob','notnull' => false]
 		),
 		'description' => array
 		(

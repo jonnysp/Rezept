@@ -35,7 +35,6 @@ class RecipesCategorieViewer extends ContentElement
 
 		$Categorie = array();
 		$Recipes = array();
-		$Debug = array();
 
 		$objCategorie = RecipesCategoriesModel::findByPK($this->recipescategorie);
 		$filterRecipes = RecipesModel::findAll(
@@ -71,9 +70,7 @@ class RecipesCategorieViewer extends ContentElement
 					"description" => $value->description,
 					"ingredients" => $value->ingredients,
 					"preparation" => $value->preparation,
-					"published" => $value->published,
-					"tags" => StringUtil::deserialize($value->tags),
-					"categories" => StringUtil::deserialize($value->categories)
+					"published" => $value->published
 				);
 
 				//main Image				
